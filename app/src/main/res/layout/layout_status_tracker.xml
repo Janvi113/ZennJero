@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="com.zennjero.kook.app.domain.OrderStatus"/>
+        <variable
+            name="status"
+            type="com.zennjero.kook.app.domain.OrderStatus" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginEnd="@dimen/status_indicator_margin2"
+            android:layout_marginStart="@dimen/status_indicator_margin"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:indeterminate="false"
+            app:orderStatus="@{status}"
+            android:max="@integer/progress_bar_max"
+            android:progressBackgroundTint="@color/gray"
+            android:progressTint="@color/primaryColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/tracker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/status_indicator_margin2"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/start"
+                android:checked="true"
+                android:enabled="false"
+                style="@style/StatusTrackerCheckBoxStyle"
+                />
+
+            <Space
+                style="@style/FillSpace"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/inPrep"
+                android:checked="@{(status == OrderStatus.PREPARING || status == OrderStatus.ON_THE_WAY || status == OrderStatus.DELIVERED)}"
+                android:enabled="@{(status == OrderStatus.ORDER_PLACED)}"
+                style="@style/StatusTrackerCheckBoxStyle"
+                />
+
+            <Space
+                style="@style/FillSpace"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/delivering"
+                android:checked="@{(status == OrderStatus.ON_THE_WAY || status == OrderStatus.DELIVERED)}"
+                android:enabled="@{(status == OrderStatus.PREPARING)}"
+                style="@style/StatusTrackerCheckBoxStyle"
+                />
+
+            <Space
+                style="@style/FillSpace"/>
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/completed"
+                android:checked="@{(status == OrderStatus.DELIVERED)}"
+                android:enabled="@{(status == OrderStatus.ON_THE_WAY)}"
+                style="@style/StatusTrackerCheckBoxStyle"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tracker">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/start"
+                style="@style/BodyText"
+                android:textColor="@android:color/darker_gray"
+                />
+
+            <Space
+                style="@style/FillSpace"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/status_tracker_padding1"
+                android:text="@string/in_prep"
+                style="@style/BodyText"
+                android:textColor="@android:color/darker_gray"
+                />
+
+            <Space
+                style="@style/FillSpace"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:paddingStart="@dimen/status_tracker_padding2"
+                android:text="@string/delivering"
+                style="@style/BodyText"
+                android:textColor="@android:color/darker_gray"
+                />
+
+            <Space
+                style="@style/FillSpace"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="@string/completed"
+                style="@style/BodyText"
+                android:textColor="@android:color/darker_gray"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

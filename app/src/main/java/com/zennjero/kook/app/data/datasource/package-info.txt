@@ -1,0 +1,7 @@
+This package will contain datasource interfaces for different modules.
+
+eg
+
+interface UserDataSource {
+    suspend getUser(): Flow<User>
+}

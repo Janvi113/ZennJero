@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.zennjero.kook.app.presentation.auth.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context="com.zennjero.kook.app.presentation.auth.MobileFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/topLayoutMargin"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    style="@style/LogeerImageStyle"
+                    app:imageType="@{viewModel.loginType}" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <TextView
+                        style="@style/WelcomeTextStyle"
+                        android:text="@string/welcome_back" />
+
+                    <TextView
+                        style="@style/TagLineStyle"
+                        app:textType="@{viewModel.loginType}"
+                        tools:text="@string/c_mon_let_s_get_your_food_on_the_wheels" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/phone_num_et"
+                style="@style/LoginEditTextStyle"
+                android:autofillHints="no"
+                android:hint="@string/enter_mobile"
+                android:inputType="phone"
+                android:maxLength="10"
+                android:text="@={viewModel.phoneNumber}" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/btnGetOtp"
+                    style="@style/LoginButtonsStyle"
+                    android:text="@string/get_otp" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@style/ProgressBarStyle" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</layout>

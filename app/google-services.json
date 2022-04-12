@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "603025875362",
+    "firebase_url": "https://zennjero-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "zennjero",
+    "storage_bucket": "zennjero.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:603025875362:android:962ac8bc2ba2043f2912fb",
+        "android_client_info": {
+          "package_name": "com.zennjero.kook.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "603025875362-iiof023n3pae5phgoej4ur7nu98idfog.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zennjero.kook.app",
+            "certificate_hash": "d1675cc775718ee2b75eaa0b7eb4e984782f6889"
+          }
+        },
+        {
+          "client_id": "603025875362-jpc0urvu8b3g8180kd8qphsobjpl1845.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.zennjero.kook.app",
+            "certificate_hash": "536e79f410ecb4b5d63c7df886089950b7709c23"
+          }
+        },
+        {
+          "client_id": "603025875362-ut09gdbith59cgj91dhjn2ee680co3mv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8f79iMHpbzot40f_qEgS7SMAGKWknIpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "603025875362-ut09gdbith59cgj91dhjn2ee680co3mv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

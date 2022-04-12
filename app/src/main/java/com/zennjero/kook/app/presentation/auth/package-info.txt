@@ -1,0 +1,5 @@
+This will contain all the classes related to authentication.
+LoginActivity, MobileFragment, OTPFragment
+LoginViewModel
+LoginUIModel
+etc

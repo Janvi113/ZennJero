@@ -1,0 +1,21 @@
+This package will contain network library related classes (eg Retrofit/Volley) in our case Firebase.
+
+eg
+
+open class BaseAPI {
+    fun saveCollection(...) {
+
+    }
+    fun readCollection(...) {
+
+    }
+    fun updateCollection(...) {
+    // can be taken care in save itself
+    }
+    fun deleteRecord(...) {
+
+    }
+}
+
+All other APIs will extend BaseAPI and use these generic methods to send/retrieve data.
+BaseAPI will return generic type(documentSnapshot).

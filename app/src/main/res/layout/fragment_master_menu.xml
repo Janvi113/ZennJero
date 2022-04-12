@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.zennjero.kook.app.presentation.menu.MasterMenuViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/publish_button"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="@dimen/formWindowVerticalPadding"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:listitem="@layout/mastermenu_itemview" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/publish_button"
+            style="@style/PrimaryCtaButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginTop="@dimen/formItemGap"
+            android:layout_marginLeft="@dimen/formWindowPaddingHorizontal"
+            android:layout_marginRight="@dimen/formWindowPaddingHorizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/selected_item_count"
+            app:layout_constraintRight_toRightOf="parent"
+            android:text="@string/publish"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/selected_item_count"
+            style="@style/Order_Summary_fields_text_style"
+            android:textSize="@dimen/bodyTextSize"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginBottom="@dimen/formWindowVerticalPadding"
+            />
+        <include
+            android:id="@+id/progress_layout"
+            layout="@layout/layout_progress"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

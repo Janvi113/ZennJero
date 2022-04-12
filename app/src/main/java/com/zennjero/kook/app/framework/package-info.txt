@@ -1,0 +1,11 @@
+This package will contain implementation classes for the datasource interface.
+
+eg
+
+class UserDataSourceImpl: UserDataSource() {
+    private val userAPI = UserAPI()
+    private val userDAO = UserDAO()
+    fun getUser() {
+
+    }
+}

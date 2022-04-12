@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.zennjero.kook.app.presentation.personaldetails.PersonalDetailsViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.address.PersonalDetailsFragment"
+        android:background="@color/backgroundColor">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/formWindowPaddingHorizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/formWindowVerticalPadding"
+                android:text="@string/personal_details"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                style="@style/NavBarHeading"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/name_layout"
+                style="@style/FormTextInputLayoutStyle"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/name"
+                    style="@style/FormSingleLineEditTextStyle"
+                    android:hint="@string/name"
+                    android:text="@={viewModel.name}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_layout"
+                style="@style/FormTextInputLayoutStyle">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/email"
+                    style="@style/FormSingleLineEditTextStyle"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:text="@={viewModel.email}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dob_layout"
+                style="@style/FormTextInputLayoutStyle"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dob"
+                    style="@style/FormSingleLineEditTextStyle"
+                    android:hint="@string/dob"
+                    android:text="@={viewModel.dob}"
+                    android:inputType="none"
+                    android:focusable="false"
+                    android:cursorVisible="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/mobilenumber_layout"
+                style="@style/FormTextInputLayoutStyle"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/mobile_number"
+                    style="@style/FormSingleLineEditTextStyle"
+                    android:hint="@string/mobile_no"
+                    android:text="@{viewModel.phonenumber}"
+                    android:focusable="false"
+                    android:cursorVisible="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/proceed_button"
+                style="@style/PrimaryCtaButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/formItemGap"
+                android:text="@string/proceed"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include
+            android:id="@+id/progress_layout"
+            layout="@layout/layout_progress"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

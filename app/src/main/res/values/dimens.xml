@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Others    -->
+    <integer name="fillRemaining">1</integer>
+    <integer name="progress_bar_max">100</integer>
+
+    <!--    Form    -->
+    <dimen name="formWindowPaddingHorizontal">40dp</dimen>
+    <dimen name="formWindowVerticalPadding">10dp</dimen>
+    <dimen name="formItemGap">30dp</dimen>
+
+    <!--    Toolbar     -->
+    <dimen name="toolbarHeight">110dp</dimen>
+    <dimen name="toolBarAvatarSize">130dp</dimen>
+    <dimen name="toolBarContentMargin">20dp</dimen>
+    <dimen name="toolbarVerticalMargin">10dp</dimen>
+
+    <!--    Snack Bar   -->
+    <dimen name="snackBarHeight">53dp</dimen>
+    <dimen name="snackBarHorizontalPadding">30dp</dimen>
+    <dimen name="widthFillBetween">0dp</dimen>
+
+    <!--    Default    -->
+    <dimen name="defaultItemGap">10dp</dimen>
+
+    <dimen name="imageHeight">140dp</dimen>
+    <dimen name="imageWidth">140dp</dimen>
+    <dimen name="imageMargin">20dp</dimen>
+    <dimen name="topLayoutMargin">140dp</dimen>
+    <dimen name="titleTextSize">16sp</dimen>
+    <dimen name="bodyTextSize">12sp</dimen>
+    <dimen name="navHeadingTextSize">18sp</dimen>
+    <dimen name="topImageMargin">120dp</dimen>
+    <dimen name="cardTopMargin">80dp</dimen>
+    <dimen name="llcardmargin">63dp</dimen>
+    <dimen name="toolbar_width">60dp</dimen>
+    <dimen name="status_check_box_size">24dp</dimen>
+    <dimen name="status_indicator_margin">10dp</dimen>
+    <dimen name="status_tracker_padding1">20dp</dimen>
+    <dimen name="status_tracker_padding2">5dp</dimen>
+    <dimen name="status_indicator_margin2">20dp</dimen>
+    <dimen name="order_tile_padding">16dp</dimen>
+
+</resources>

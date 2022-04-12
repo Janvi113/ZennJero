@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingStart="@dimen/order_tile_padding"
+    android:paddingTop="@dimen/order_tile_padding"
+    android:paddingBottom="@dimen/order_tile_padding"
+    tools:ignore="RtlSymmetry">
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dishName"
+        style="@style/Order_Summary_fields_text_style"
+        android:layout_marginTop="@dimen/order_tile_padding"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/price"
+        style="@style/Order_Summary_fields_text_style"
+        android:layout_marginTop="@dimen/order_tile_padding"
+        android:layout_marginEnd="@dimen/formWindowPaddingHorizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/checkbox"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/serving"
+        style="@style/Order_Summary_fields_text_style"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dishName"
+
+        />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/description"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/bodyTextSize"
+        android:layout_width="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/checkbox"
+        app:layout_constraintTop_toBottomOf="@id/serving"/>
+
+    <CheckBox
+        android:id="@+id/checkbox"
+        android:buttonTint="@color/primaryColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@drawable/checkbox_selector"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--   Input Filed Styles  -->
+
+    <style name="FormTextInputLayoutStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="boxBackgroundMode">filled</item>
+        <item name="boxBackgroundColor">@color/backgroundColor</item>
+        <item name="hintEnabled">true</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorIconDrawable">@null</item>
+        <item name="errorTextColor">@android:color/holo_red_dark</item>
+        <item name="boxStrokeErrorColor">@android:color/holo_red_dark</item>
+    </style>
+
+    <style name="FormEditTextStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:textColorHint">@color/text_grey</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="FormSingleLineEditTextStyle" parent="@style/FormEditTextStyle">
+        <item name="android:inputType">text</item>
+        <item name="android:maxLines">1</item>
+    </style>
+
+    <!--   Button Styles  -->
+
+    <style name="PrimaryCtaButtonStyle">
+        <item name="cornerRadius">50dp</item>
+        <item name="backgroundTint">@color/button_green</item>
+        <item name="android:textAppearance">@style/NavBarHeading</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:paddingStart">50dp</item>
+        <item name="android:paddingEnd">50dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="SnackBarOutlinedButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:textAppearance">@style/BodyText</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="textAllCaps">false</item>
+        <item name="android:paddingTop">-6dp</item>
+        <item name="android:paddingBottom">-6dp</item>
+        <item name="android:paddingStart">-6dp</item>
+        <item name="android:paddingEnd">-6dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="cornerRadius">15dp</item>
+        <item name="strokeColor">@color/white</item>
+        <item name="backgroundTint">@color/button_green</item>
+    </style>
+
+    <style name="StatusTrackerCheckBoxStyle">
+        <item name="android:layout_width">@dimen/status_check_box_size</item>
+        <item name="android:layout_height">@dimen/status_check_box_size</item>
+        <item name="android:button">@drawable/status_check_button</item>
+    </style>
+
+    <style name="FillSpace">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">@integer/fillRemaining</item>
+    </style>
+    <!--   Text Styles  -->
+
+    <style name="NavBarHeading">
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="TitleText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="BodyText">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+
+    <style name="LoginEditTextStyle">
+        <item name="android:layout_width">300dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">@dimen/navHeadingTextSize</item>
+        <item name="android:layout_margin">20dp</item>
+        <item name="backgroundTint">@color/primaryColor</item>
+    </style>
+
+    <style name="LoginOptionButtonStyle" parent="Widget.Material3.Button">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/text_grey</item>
+        <item name="android:textSize">@dimen/bodyTextSize</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">34dp</item>
+        <item name="cornerRadius">19dp</item>
+        <item name="backgroundTint">@color/button_yellow</item>
+    </style>
+
+    <style name="LoginButtonsStyle" parent="Widget.Material3.Button">
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">@dimen/bodyTextSize</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_marginEnd">52dp</item>
+        <item name="android:layout_marginStart">52dp</item>
+        <item name="android:layout_marginTop">24dp</item>
+        <item name="cornerRadius">19dp</item>
+        <item name="backgroundTint">@color/button_green</item>
+    </style>
+
+    <style name="LogeerImageStyle">
+        <item name="android:layout_height">@dimen/imageHeight</item>
+        <item name="android:layout_width">@dimen/imageWidth</item>
+        <item name="android:layout_margin">@dimen/imageMargin</item>
+    </style>
+
+    <style name="WelcomeTextStyle">
+        <item name="android:layout_height">35dp</item>
+        <item name="android:layout_width">171dp</item>
+        <item name="android:textSize">@dimen/titleTextSize</item>
+        <item name="android:textColor">@color/text_grey</item>
+    </style>
+
+    <style name="TagLineStyle" parent="@style/WelcomeTextStyle">
+        <item name="android:textSize">@dimen/bodyTextSize</item>
+    </style>
+
+    <style name="ProgressBarStyle">
+        <item name="android:visibility">gone</item>
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_margin">30dp</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="CustomCardCorners" parent="@style/Widget.MaterialComponents.CardView">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance_custom_corners</item>
+    </style>
+
+    <style name="ShapeAppearance_custom_corners" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">40dp</item>
+        <item name="cornerSizeTopRight">40dp</item>
+    </style>
+
+    <style name="FrameLayout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@color/white</item>
+        <item name="android:animateLayoutChanges">true</item>
+    </style>
+
+
+    <style name="TabLayoutStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="tabMode">fixed</item>
+    </style>
+    <style name="ViewPagerStyle">
+        <item name="android:layout_below">@+id/tabLayout</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
+    </style>
+
+    <style name="ChipGroupStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_margin">16dp</item>
+    </style>
+
+    <style name="ChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:checkable">true</item>
+        <item name="chipStrokeColor">@color/backgroundColor</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_text_color</item>
+        <item name="chipBackgroundColor">@color/chip_background</item>
+
+    </style>
+
+    <style name="DateChipStyle" parent="ChipStyle">
+        <item name="android:checkable">false</item>
+        <item name="chipBackgroundColor">@color/backgroundColor</item>
+        <item name="chipStrokeColor">@color/backgroundColor</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_text_selected</item>
+    </style>
+
+    <style name="FilterImageStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:src">@drawable/ic_filter</item>
+        <item name="android:layout_margin">16dp</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+
+    <style name="BackButtonStyle" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="icon">@drawable/ic_back</item>
+        <item name="iconTint">@color/white</item>
+        <item name="rippleColor">@android:color/transparent</item>
+        <item name="backgroundTint">@color/primaryColor</item>
+        <item name="android:layout_width">40dp</item>
+        <item name="android:layout_height">40dp</item>
+    </style>
+
+    <style name="Toolbar_heading_text_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">@dimen/navHeadingTextSize</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
+        <item name="android:layout_gravity">center</item>
+    </style>
+
+    <style name="toolbar_style">
+       <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/toolbar_width</item>
+        <item name="android:background">@color/primaryColor</item>
+        <item name="android:theme">@style/Theme.AppCompat.DayNight.DarkActionBar</item>
+        <item name="android:popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="AppBarLayout_style">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:theme">@style/Theme.AppCompat.DayNight.DarkActionBar</item>
+    </style>
+
+   <style name="Order_Summary_fields_text_style">
+       <item name="android:layout_width">wrap_content</item>
+       <item name="android:layout_height">wrap_content</item>
+       <item name="fontFamily">@font/poppins</item>
+       <item name="android:textSize">14sp</item>
+       <item name="android:textColor">@color/black</item>
+   </style>
+
+    <style name="Order_Summary_fields_heading_text_style" parent="@style/Order_Summary_fields_text_style">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TimeChipStyle" parent="ChipStyle">
+        <item name="chipBackgroundColor">@color/backgroundColor</item>
+        <item name="android:textColor">@color/chip_text_selected</item>
+        <item name="android:checkable">false</item>
+        <item name="android:layout_marginStart">34dp</item>
+    </style>
+
+    <style name="DishTitleTextStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/navHeadingTextSize</item>
+        <item name="android:layout_marginEnd">34dp</item>
+        <item name="android:layout_marginStart">34dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:layout_marginStart">34dp</item>
+        <item name="android:layout_marginEnd">34dp</item>
+        <item name="android:background">@color/button_green</item>
+    </style>
+
+</resources>

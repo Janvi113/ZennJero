@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray">#CCCCCC</color>
+
+    <color name="primaryColor">#115429</color>
+    <color name="button_yellow">#FCC966</color>
+    <color name="text_grey">#3C3838</color>
+    <color name="backgroundColor">#DCF3E6</color>
+    <color name="secondaryColor">#FAB83F</color>
+    <color name="button_green">#4A7A56</color>
+    <color name="bottom_nav_icon_selected_color">#115429</color>
+    <color name="bottom_nav_unselected_icon_color">#A7A7A7</color>
+
+    <color name="tab_background_selected">@color/backgroundColor</color>
+    <color name="tab_background_unselected">@color/white</color>
+
+    <color name="chip_background_unselected">@color/button_green</color>
+    <color name="chip_background_selected">@color/backgroundColor</color>
+    <color name="chip_text_selected">@color/black</color>
+    <color name="chip_text_unselected">@color/button_green</color>
+
+
+
+
+</resources>

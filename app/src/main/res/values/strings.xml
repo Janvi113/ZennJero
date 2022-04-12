@@ -1,0 +1,72 @@
+<resources>
+    <string name="app_name">ZennJero</string>
+    <string name="google_maps_key">AIzaSyD8f79iMHpbzot40f_qEgS7SMAGKWknIpk</string>
+    <string name="address_details">Address Details</string>
+    <string name="house_no_flat_no">Floor No/Flat No</string>
+    <string name="apartment_name">Building Name</string>
+    <string name="landmark">Landmark</string>
+    <string name="address_name">Save Address As</string>
+    <string name="proceed">Proceed</string>
+    <string name="publish">Publish</string>
+    <string name="pick_location">Pick Location</string>
+
+    <string name="take_your_business_to_a_next_level">Take your business to a next level</string>
+
+    <string name="kook_login">Be a Kook</string>
+    <string name="buyer_login">Be a foodie</string>
+    <string name="login">Login</string>
+    <string name="enter_mobile">Enter Mobile</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="are_you_ready_to_order_some_zenlicious_homemade_food">Are you ready to order some Zenlicious homemade food ?</string>
+    <string name="c_mon_let_s_get_your_food_on_the_wheels">C\'mon let\'s get your food on the wheels!</string>
+    <string name="welcome_back">Welcome Back !</string>
+    <string name="otp">OTP</string>
+    <string name="only_a_few_minutes_away_from_delicious_food">Only a few minutes away from delicious food.</string>
+
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="otp_send">OTP send</string>
+    <string name="enter_valid_otp">Enter valid OTP</string>
+    <string name="sign_in_failed">Sign in failed</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="signed_in_successfully">Signed in successfully</string>
+
+    <string name="kook_sign_in">Kook Sign-In</string>
+    <string name="kook_subtitle">Glad to have you here !</string>
+    <string name="location">Location</string>
+    <string name="address_name_example">Ex. Home address, Office Address</string>
+    <string name="residential_details">Residential details</string>
+    <string name="create_account">Create Account</string>
+    <string name="location_permission_is_off">Location permission is required</string>
+    <string name="allow">Allow</string>
+
+    <string name="personal_details">Personal Details</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="dob">Date Of Birth</string>
+    <string name="mobile_no">Mobile Number</string>
+    <string name="home">Home</string>
+    <string name="menu">Menu</string>
+    <string name="orders">Orders</string>
+    <string name="account">Account</string>
+    <string name="order_summary">Order summary</string>
+    <string name="order_no">Order No : </string>
+    <string name="item_names">Item names</string>
+    <string name="quantity_ordered">Quantity Ordered</string>
+    <string name="total_price">Total price : </string>
+    <string name="customer_details">Customer details : </string>
+    <string name="distance">Distance : </string>
+
+    <string name="start">Start</string>
+    <string name="in_prep">In Prep</string>
+    <string name="delivering">Delivering</string>
+    <string name="upcoming">Upcoming</string>
+    <string name="cancelled">Cancelled</string>
+    <string name="today">Today</string>
+    <string name="completed">Completed</string>
+
+    <string name="closing_time">Closing time -</string>
+    <string name="serving">Serving</string>
+    <string name="quantity">Quantity</string>
+
+    <string name="Rs">\u20B9</string>
+</resources>

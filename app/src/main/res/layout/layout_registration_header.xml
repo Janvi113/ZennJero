@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="title"
+            type="String" />
+        <variable
+            name="subtitle"
+            type="String" />
+        <variable
+            name="drawable"
+            type="android.graphics.drawable.Drawable" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbarHeight"
+            android:background="@color/primaryColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/appCompatImageView"
+            android:layout_width="@dimen/toolBarAvatarSize"
+            android:layout_height="@dimen/toolBarAvatarSize"
+            android:layout_marginStart="@dimen/toolBarContentMargin"
+            android:layout_marginTop="@dimen/toolBarContentMargin"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:drawable="@{drawable}"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="@dimen/widthFillBetween"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/toolBarContentMargin"
+            android:layout_marginBottom="@dimen/toolbarVerticalMargin"
+            android:text="@{title}"
+            android:textAppearance="@style/NavBarHeading"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subtitle"
+            android:layout_width="@dimen/widthFillBetween"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/toolBarContentMargin"
+            android:layout_marginBottom="@dimen/toolbarVerticalMargin"
+            android:text="@{subtitle}"
+            android:textAppearance="@style/TitleText"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/appCompatImageView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

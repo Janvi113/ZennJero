@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="com.zennjero.kook.app.presentation.address.AddressViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context="com.zennjero.kook.app.presentation.address.AddressDetailsFragment">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/linearLayoutCompat"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingHorizontal="@dimen/formWindowPaddingHorizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:layout_marginTop="@dimen/formWindowVerticalPadding"
+                android:text="@string/residential_details"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                style="@style/NavBarHeading"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/house_flat_no_layout"
+                style="@style/FormTextInputLayoutStyle"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/house_flat_no"
+                    style="@style/FormEditTextStyle"
+                    android:hint="@string/house_no_flat_no"
+                    android:inputType="number"
+                    android:text="@={viewModel.houseNo}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/apartment_name_layout"
+                style="@style/FormTextInputLayoutStyle">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/apartment_name"
+                    style="@style/FormEditTextStyle"
+                    android:hint="@string/apartment_name"
+                    android:inputType="text"
+                    android:text="@={viewModel.apartmentName}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/landmark_layout"
+                style="@style/FormTextInputLayoutStyle"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/landmark"
+                    style="@style/FormEditTextStyle"
+                    android:hint="@string/landmark"
+                    android:inputType="text"
+                    android:text="@={viewModel.landmark}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressLine_layout"
+                style="@style/FormTextInputLayoutStyle"
+                >
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/addressLine"
+                    style="@style/FormEditTextStyle"
+                    android:hint="@string/location"
+                    android:text="@{viewModel.addressLine}"
+                    android:inputType="textMultiLine"
+                    android:drawableEnd="@drawable/ic_map"
+                    android:focusable="false"
+                    android:cursorVisible="false"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/addressName_layout"
+                style="@style/FormTextInputLayoutStyle">
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/addressName"
+                    style="@style/FormEditTextStyle"
+                    android:hint="@string/address_name"
+                    android:inputType="text"
+                    android:text="@={viewModel.addressName}" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/proceed_button"
+                style="@style/PrimaryCtaButtonStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/formItemGap"
+                android:text="@string/create_account"
+                />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <include
+            android:id="@+id/progress_layout"
+            layout="@layout/layout_progress"/>
+
+        <include
+            android:id="@+id/required_permission_layout"
+            layout="@layout/layout_required_permission"
+            android:layout_height="@dimen/snackBarHeight"
+            android:layout_width="match_parent"
+            app:layout_constraintBottom_toBottomOf="@+id/linearLayoutCompat"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
